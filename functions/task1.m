@@ -5,13 +5,20 @@ function new_X = task1 (photo, k)
   new_X = zeros (m, n);
   
   % TODO: cast photo la double.
+  photo = double(photo);
   
   % TODO: aplica algoritmul SVD asupra photo.
+  [U, S, V] = svd(photo);
   
   % TODO: calculeaza noile matrici reduse U, S si V.
+  U_k = U(:, 1:k);
+  S_k = S(1:k, 1:k);
+  V_k = V(:, 1:k);
   
   % TODO: calculeaza new_X care este aproximarea matricii initiale photo,
   % folosindu-va de matricile calculate anterior.
+  new_X = U_k * S_k * V_k';
   
   % TODO: transforma matricea in uint8 pentru a fi o imagine valida.
+  new_X = uint8(new_X);
 endfunction
