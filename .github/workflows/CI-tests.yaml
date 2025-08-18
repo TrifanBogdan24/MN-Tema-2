@@ -1,0 +1,32 @@
+name: Run Tests on implementation
+
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies (Octave)
+        run: |
+          sudo apt update
+          sudo apt install -y octave
+      - name: Run checker
+        working-directory: ${{ github.workspace }}     # Repository's root
+        run: octave-cli checker.m 2>&1 | tee test_results.txt
+      
+      - name: Upload test logs as artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: checker-logs
+          path: test_results.txt
+          retention-days: 7
