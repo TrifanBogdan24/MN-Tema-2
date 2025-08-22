@@ -1,4 +1,4 @@
-# 🖼️ Numerical Image Processing
+# 🖼️ Numerical Images
 
 Acest proiect explorează metode numerice pentru **procesarea și compresia imaginilor**,
 folosind concepte fundamentale din algebra liniară (`SVD`, `PCA`) și clasificare (`k-NN`).
@@ -14,7 +14,7 @@ Am implementat o funcție care comprimă o imagine alb-negru folosind **descompu
 Prin păstrarea doar a celor mai importante valori singulare,
 obținem o imagine aproape identică vizual, dar mult mai compactă în memorie.
 
-**Ce am învățat:**
+💡 **Ce am învățat:**
 cum poate fi folosită algebra liniară pentru a elimina informația redundantă
 și a optimiza stocarea imaginilor.
 
@@ -25,7 +25,7 @@ Am aplicat **analiza componentelor principale (`PCA`)** folosind `SVD`
 pentru a reduce dimensiunea datelor și a reconstrui imaginea.
 PCA surprinde direcțiile de variație maximă și permite o reprezentare mai eficientă.
 
-**Ce am învățat:** legătura dintre `PCA` și `SVD`
+💡 **Ce am învățat:** legătura dintre `PCA` și `SVD`
 și cum putem proiecta datele într-un spațiu redus păstrând structura esențială.
 
 
@@ -34,7 +34,7 @@ PCA surprinde direcțiile de variație maximă și permite o reprezentare mai ef
 Am implementat `PCA` folosind **matricea de covarianță** și valori proprii.
 Aceasta este o abordare alternativă la metoda cu `SVD`, dar cu rezultate similare.
 
-**Ce am învățat:** cum valorile și vectorii proprii definesc componentele principale
+💡 **Ce am învățat:** cum valorile și vectorii proprii definesc componentele principale
 și cum pot fi aplicate pentru reducerea dimensiunii datelor.
 
 
@@ -48,7 +48,7 @@ Algoritmul atinge o **acuratețe** de **aproximativ 93%**.
 
 > **MNIST** = Modified National Institute of Standards and Technology
 
-**Ce am învățat:**
+💡 **Ce am învățat:**
 pașii necesari într-un pipeline clasic de machine learning – de la
 pregătirea datelor și reducerea dimensionalității, până la clasificare și evaluarea rezultatelor.
 
